@@ -1,4 +1,4 @@
 *.auto.tfvars
 .terraform
 *tfstate*
-
+plan.out
