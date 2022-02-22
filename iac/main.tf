@@ -39,4 +39,10 @@ resource "github_branch" "dev" {
   branch     = "dev"
 }
 
+data "github_repositories" "repos" {
+  query = "org:${var.owner}"
+}
 
+output "repos" {
+  value = data.github_repositories.repos.names
+}
